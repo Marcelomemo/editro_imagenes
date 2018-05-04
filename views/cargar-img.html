@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block navbar %}
+
+<nav>
+    <div class="nav-wrapper teal">
+        <ul id="nav-mobile" class="right show">
+            <li><a href="/user"> Galeria</a></li>
+            <li><a href="/subir-archivo"> Subir Archivo </a></li>
+            <li><a href="/"> Cerrar Sesión </a></li>
+        </ul>
+    </div>
+</nav>
+
+{% endblock %}
+
+{% block titulo %}
+    Carga tu Imagen
+{% endblock %}
+
+{% block cargarImg %}
+<div class="col s6 offset-s3"">
+    <form id="frmUpload" role="form" method="POST" action="/uploadFile" enctype="multipart/form-data">
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="file" id="inpUpload" name="inpUpload" required>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="input-field col s12">
+
+                <input type="submit" value="Enviar" id="inpEnviarImagen" name="inpEnviarImagen" class="btn btn-primary">
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

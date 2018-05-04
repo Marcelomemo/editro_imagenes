@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block titulo %}
+	Registro Usuario
+{% endblock %}
+
+{% block formulario %}
+<div class="col s6 offset-s3"">
+	<form role="form" action="/registro" method="POST" class="col s12">
+
+		<div class="row">
+			<div class="input-field col s12">
+				<input id="nombre" name="nombre" type="text" class="validate" placeholder="Nombre y apellido" required>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s12">
+				<input id="usaurio" name="usuario" type="text" class="validate" placeholder="Usuario" required>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s12">
+				<input id="pass" name="pass" type="password" class="validate" placeholder="Contraseña" required>
+			</div>
+		</div>
+
+		<div class="row">
+			<button type="submit" class="waves-effect waves-light btn"> Registrar </button>
+		</div>
+	</form>
+</div>			
+{% endblock %}

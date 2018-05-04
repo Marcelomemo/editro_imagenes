@@ -1,0 +1,17 @@
+.galeria {
+    border: solid 2px;
+    border-radius: 5px;
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+}
+
+canvas{
+    border: solid;
+    cursor: crosshair;
+}
+
+.controlimg {
+    border: solid;
+    padding: 10px;
+}

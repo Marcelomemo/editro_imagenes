@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block navbar %}
+
+<nav>
+    <div class="nav-wrapper teal">
+        <ul id="nav-mobile" class="right show">
+            <li><a href="/user"> Galeria</a></li>
+            <li><a href="/subir-archivo"> Subir Archivo </a></li>
+            <li><a href="/"> Cerrar Sesión </a></li>
+        </ul>
+    </div>
+</nav>
+
+{% endblock %}
+
+{% block titulo %}
+    Galeria de Imagenes
+{% endblock %}
+
+{% block mainApp %}
+
+<div class="row">
+    <form role="form" method="POST" action="/edit">
+
+        {% for imagen in imagenes %}
+            <img class="galeria" src="{{ imagen }}" onclick="$('#idImagen').val('{{ imagen }}');document.forms[0].submit();">
+
+        {% endfor %}
+
+       <input type="hidden" id="idImagen" name="idImagen">
+        
+    </form>
+</div>       
+
+{% endblock %}

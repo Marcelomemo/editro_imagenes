@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block titulo %}
+	Inicio Sesión
+{% endblock %}
+
+{% block formulario %}
+
+<div class="col s6 offset-s3"">
+	<form role="form" action="/login" method="POST" class="col s12">
+
+		<div class="row">
+			<div class="input-field col s12">
+				<input id="usaurio" name="usuario" type="text" class="validate" placeholder="Usuario" required>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s12">
+				<input id="pasword" name="password" type="password" class="validate" placeholder="Contraseña" required>
+			</div>
+		</div>
+
+		<div class="row">
+			<button type="submit" class="waves-effect waves-light btn"> Ingresar </button>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s12">
+				<p><a href="/registro"> Registrate aquí </a></p>
+				<p>Iniciar sesión en <a href="/auth/twitter"> Twitter </a></p>
+			</div>
+		</div>
+	</form>
+</div>
+
+{% endblock %}
